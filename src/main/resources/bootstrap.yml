@@ -1,0 +1,19 @@
+#以下为在发现服务中心进行注册
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8907/eureka/
+
+#以下为读取服务中心配置信息
+spring:
+  application:
+    name: test-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/huanghuangboy/config #配置文件所在仓库
+          username: 1215548629@qq.com
+          password: huang134
+          default-label: master #配置文件分支
+          search-paths:   #配置文件所在根目录
